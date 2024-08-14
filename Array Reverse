@@ -1,0 +1,22 @@
+public class ArrayReverse {
+    public static void reversethearray(int[] array) {
+        int i = 0;
+        int j = array.length -1;
+        while (i < j) {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+            i++;
+            j--;
+        }
+    }
+
+    public static void main(String[] args) {
+        int passthearray[] = {1, 2, 3, 4, 5, 6, 7};
+        reversethearray(passthearray);
+        for (int i = 0; i < passthearray.length; i++)
+        {
+            System.out.println(passthearray[i] + " ");
+        }
+    }
+}
