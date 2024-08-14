@@ -1,0 +1,18 @@
+package ArrayPrograming;
+
+public class FindMaxMinNumber {
+    public static void FindNumber(int []array){
+        int max=array[0];
+        for (int i=1;i<array.length;i++){
+            if (max<array[i]){
+                max=array[i];
+            }
+
+        }
+        System.out.println(max);
+    }
+    public static void main(String[] args) {
+        int number[]={177,22,21,56,122,23,77,89,12,66,65};
+        FindNumber(number);
+    }
+}
