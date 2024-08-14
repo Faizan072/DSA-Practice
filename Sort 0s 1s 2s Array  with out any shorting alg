@@ -1,0 +1,37 @@
+package ArrayPrograming;
+class Reverse{
+    public static void ReverseArray(int []arr){
+        int zero =0;
+        int one =0;
+        int two =arr.length-1;
+
+        while(one<=two){
+            if(arr[one]==0){
+                int temp=arr[zero];
+                arr[zero]=arr[one];
+                arr[one]=temp;
+                zero++;
+                one++;
+            }
+            else if (arr[one]==2) {
+                int temp = arr[two];
+                arr[two]=arr[one];
+                arr[one]=temp;
+                two--;
+            }
+            else {
+                one++;
+            }
+        }
+        for (int i=0; i<arr.length;i++){
+            System.out.println(arr[i]);
+        }
+
+    }
+}
+public class Sort0s1sand2sArray {
+    public static void main(String[] args) {
+       int [] arr = {1,1,2,0,2,0,0,1,2};
+       Reverse.ReverseArray(arr);
+    }
+}
