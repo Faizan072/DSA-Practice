@@ -1,0 +1,26 @@
+package ArrayPrograming;
+
+import java.util.Arrays;
+import java.util.Collections;
+
+public class KthMaxMin {
+    public static void FindKthElemet(int[]array,int k){
+        for(int i=0;i<array.length;i++){
+           for(int j=1;j<array.length-1;j++){
+                if(array[i]>array[j]){
+                    //swap
+                   int temp=array[i];
+                   array[i]=array[j];
+                    array[j]=temp;
+                }
+            }
+        }
+
+        System.out.println(array[k]);
+    }
+
+    public static void main(String[] args) {
+        int [] number= {22,42,1,5,67,89,12,68};
+        FindKthElemet(number,2);
+    }
+}
