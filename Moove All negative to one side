@@ -1,0 +1,24 @@
+package ArrayPrograming;
+class MoveElement{
+    public static  void Move(int [] array){
+        int j= array.length-1;
+        for(int i=0; i<array.length;i++){
+            if(array[i]<0){
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+                j--;
+            }
+        }
+        for(int i=0; i<array.length;i++){
+            System.out.println(array[i]);
+        }
+    }
+}
+
+public class MoveNegativeElements {
+    public static void main(String[] args) {
+    int []arr={-11,-12,-13,33,44,55,-55,-67};
+    MoveElement.Move(arr);
+    }
+}
